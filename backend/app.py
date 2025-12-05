@@ -2,7 +2,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from .calculator import estimate_materials
-
 app = Flask(__name__)
 # CORS allows your React frontend to make requests to this Flask backend
 CORS(app) 
