@@ -4,7 +4,7 @@ from flask_cors import CORS
 from .calculator import estimate_materials
 app = Flask(__name__)
 # CORS allows your React frontend to make requests to this Flask backend
-CORS(app) 
+CORS(app, resources={r"/api/*": {"origins": "https://materialandtheirpricecalculator1.onrender.com"}})
 
 @app.route('/api/estimate', methods=['POST'])
 def get_estimation():
