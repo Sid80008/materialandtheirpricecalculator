@@ -15,7 +15,7 @@ function App() {
         setResults(null);
         try {
             // The API endpoint of your Flask backend
-            const response = await axios.post('http://127.0.0.1:5000/api/estimate', formData);
+            const response = await axios.post('https://materialandtheirpricecalculator.onrender.com/api/estimate', formData);
             setResults(response.data);
         } catch (err) {
             setError(err.response?.data?.error || 'Failed to fetch estimation.');
